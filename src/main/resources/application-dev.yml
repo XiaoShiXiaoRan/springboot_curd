@@ -1,0 +1,35 @@
+server:
+  port: 8152
+  servlet:
+    context-path: /api
+  tomcat:
+    max-http-form-post-size: 1GB
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/curd?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-circular-references: true
+  servlet:  
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  application:
+    name: baoan
+mybatis:
+  table:
+
+    auto: none
+  model:
+    pack: com.example.springboot_curd.system.entity #扫描用于创建表的对象的包名，多个包用“,”隔开
+  database:
+    type: mysql #数据库类型
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  mapper-locations: classpath*:**/*Mapper.xml
+
+
+
