@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--持久层 xml配置 文件-->
+<mapper namespace="com.example.springboot_curd.curd.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.springboot_curd.curd.entity.User">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="user" column="user" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user,password,
+        sex,phone,image
+    </sql>
+    <select id="getList" resultType="com.example.springboot_curd.curd.entity.User">
+        SELECT * FROM t_user
+    </select>
+</mapper>
