@@ -22,7 +22,7 @@ public class CodeGenerator {
     /**
      * <p></p>
      */
-    public static String packageName="com.example.spring_curd";
+    public static String packageName="com.example.springboot_curd";
 
     public static void main(String[] args) {
         // 代码生成器
@@ -60,7 +60,7 @@ public class CodeGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("business");
+        pc.setModuleName("curd");
         pc.setParent(packageName);
         pc.setController("controller");
         pc.setEntity("entity");
